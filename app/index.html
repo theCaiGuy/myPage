@@ -9,8 +9,6 @@
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
-    <link rel = "stylesheet" href = "bower_components/bootstrap-social/bootstrap-social.css" />
-    <link rel = "stylesheet" href = "bower_components/font-awesome/css/font-awesome.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -23,7 +21,42 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="header">
+    <link rel = "stylesheet" href = "bower_components/bootstrap-social/bootstrap-social.css" />
+    <link rel = "stylesheet" href = "bower_components/font-awesome/css/font-awesome.css" />
+
+    <nav class="navbar navbar-inverse" role="navigation" ng-cloak>
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle"
+            data-toggle="collapse" data-target="#main-nav">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">Michael Cai</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="main-nav">
+          <ul class="nav navbar-nav navbar-right">
+            <!-- Add active class to necessary item -->
+            <li ng-class="{active: activeView === 'dashboard'}">
+              <a href="/">Contact</a>
+            </li>
+            <li ng-class="{active: activeView === 'watchlist'}"
+              class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown">
+                Navigate <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+
+              </ul>
+            </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+<!--     <div class="header">
       <div class="navbar navbar-default" role="navigation">
         <div class="container">
           <div class="navbar-header">
@@ -47,7 +80,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <div class="container">
     <div ng-view=""></div>
@@ -55,7 +88,7 @@
 
     <footer>
       <div class = "container">
-            <h1>Find me on the web</h1>
+          <h1>Find me on the web</h1>
             <a class = "btn btn-lg btn-social-icon btn-linkedin" href = "https://www.linkedin.com/in/thecaiguy" title = "Find me on Linkedin">
               <span class = "fa fa-linkedin"></span>
             </a>
@@ -65,7 +98,8 @@
             <a class = "btn btn-lg btn-social-icon btn-github" href = "https://github.com/theCaiGuy" title = "Find me on Github">
               <span class = "fa fa-github"></span>
             </a>
-          </div>
+      </div>
+      <div><p> </p></div>
     </footer>
 
 

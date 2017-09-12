@@ -21,10 +21,24 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>
+$('.smooth').on('click', function() {
+    $.smoothScroll({
+        scrollElement: $('body'),
+        scrollTarget: '#' + this.id
+    });
+    
+    return false;
+});
+</script>
+
     <link rel = "stylesheet" href = "bower_components/bootstrap-social/bootstrap-social.css" />
     <link rel = "stylesheet" href = "bower_components/font-awesome/css/font-awesome.css" />
 
-    <nav class="navbar navbar-inverse" role="navigation" ng-cloak>
+    <nav position="fixed" class="navbar navbar-inverse navbar-fixed-top" role="navigation" ng-cloak>
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle"
@@ -39,16 +53,15 @@
         <div class="collapse navbar-collapse" id="main-nav">
           <ul class="nav navbar-nav navbar-right">
             <!-- Add active class to necessary item -->
-            <li ng-class="{active: activeView === 'dashboard'}">
-              <a href="/">Contact</a>
-            </li>
-            <li ng-class="{active: activeView === 'watchlist'}"
-              class="dropdown">
+            <li class="dropdown">
               <a class="dropdown-toggle" data-toggle="dropdown">
                 Navigate <b class="caret"></b>
               </a>
               <ul class="dropdown-menu">
-
+                <li><a href="#Welcome">Top</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#Resume">Resume</a></li>
+                <li><a href="#Contact">Contact</a></li>
               </ul>
             </li>
           </ul>
@@ -56,50 +69,12 @@
       </div><!-- /.container-fluid -->
     </nav>
 
-<!--     <div class="header">
-      <div class="navbar navbar-default" role="navigation">
-        <div class="container">
-          <div class="navbar-header">
-
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-
-            <a class="navbar-brand" href="#/">Michael Cai</a>
-          </div>
-
-          <div class="collapse navbar-collapse" id="js-navbar-collapse">
-
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="#/">Home</a></li>
-              <li><a ng-href="#/Contact">Contact</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div> -->
-
     <div class="container">
     <div ng-view=""></div>
     </div>
 
     <footer>
-      <div class = "container">
-          <h1>Find me on the web</h1>
-            <a class = "btn btn-lg btn-social-icon btn-linkedin" href = "https://www.linkedin.com/in/thecaiguy" title = "Find me on Linkedin">
-              <span class = "fa fa-linkedin"></span>
-            </a>
-            <a class = "btn btn-lg btn-social-icon btn-facebook" href = "https://www.facebook.com/thecaiguy" title = "Find me on Facebook">
-              <span class = "fa fa-facebook"></span>
-            </a>
-            <a class = "btn btn-lg btn-social-icon btn-github" href = "https://github.com/theCaiGuy" title = "Find me on Github">
-              <span class = "fa fa-github"></span>
-            </a>
-      </div>
-      <div><p> </p></div>
+      <center>Copyright &copy 2017 Michael Cai</center>
     </footer>
 
 
@@ -134,5 +109,7 @@
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/about.js"></script>
         <!-- endbuild -->
+        
+            <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
 </body>
 </html>

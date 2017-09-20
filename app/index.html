@@ -5,19 +5,18 @@
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
-     <link rel="stylesheet" href="https://github.com/mgcrea/angular-motion/tree/master/dist/angular-motion.css" />
-    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" /> 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.css" />
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/angular-motion/dist/angular-motion.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
-    <style>  
+    <style>
 
     </style>
   </head>
@@ -28,15 +27,13 @@
 
     <!-- Add your site or application content here -->
 
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script>
 $('.smooth').on('click', function() {
     $.smoothScroll({
         scrollElement: $('body'),
         scrollTarget: '#' + this.id
     });
-    
+
     return false;
 });
 </script>
@@ -108,6 +105,7 @@ $('.smooth').on('click', function() {
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -116,7 +114,7 @@ $('.smooth').on('click', function() {
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/about.js"></script>
         <!-- endbuild -->
-      <script src="https://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.5.0.js"></script>
+
 
 </body>
 </html>
